@@ -5,7 +5,6 @@ import math
 
 
 class Location:
-
     """
     Class Location
     """
@@ -24,8 +23,7 @@ def distance(start, end):
     sin_lat = math.sin(diff_lat / 2)
     sin_lng = math.sin(diff_lng / 2)
 
-    a = (sin_lat * sin_lat) + math.cos(math.radians(start.lat)) * math.cos(math.radians(end.lat)) * (
-                sin_lng * sin_lng)
+    a = (sin_lat * sin_lat) + math.cos(math.radians(start.lat)) * math.cos(math.radians(end.lat)) * (sin_lng * sin_lng)
     c = 2 * math.asin(min(1, math.sqrt(a)))
     dist = round(earth_radius * c, 2)
 
